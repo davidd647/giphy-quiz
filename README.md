@@ -2,7 +2,13 @@ GIPHY Quiz
 
 - Just a quiz game you can do in a giphy ("jiffy" - see what I did there? :D)
 
+- Wanna preview my stuff? Just go here! 
 
+ https://5f7404cea48727000817f901--romantic-austin-c336ce.netlify.app/
+
+ Wanna try the quiz I made for you? Go here!
+
+ https://5f7404cea48727000817f901--romantic-austin-c336ce.netlify.app/?data=%5B%7B%22right%22%3A%22cowboy%22%2C%22wrong1%22%3A%22cowdog%22%2C%22wrong2%22%3A%22dogboy%22%2C%22wrong3%22%3A%22cowcow%22%2C%22giphUrl%22%3A%22https%3A%2F%2Fmedia2.giphy.com%2Fmedia%2F7IvTtIkZoQ9aM%2F200.gif%22%7D%2C%7B%22right%22%3A%22morty%22%2C%22wrong1%22%3A%22let%27s%20do%20it%22%2C%22wrong2%22%3A%22I%27m%20in%22%2C%22wrong3%22%3A%22rock%27n%20roll%22%2C%22giphUrl%22%3A%22https%3A%2F%2Fmedia4.giphy.com%2Fmedia%2Fgk3R16JhLP8RUka2nD%2F200.gif%22%7D%2C%7B%22right%22%3A%22papers%22%2C%22wrong1%22%3A%22old%22%2C%22wrong2%22%3A%22register%22%2C%22wrong3%22%3A%22SNL%22%2C%22giphUrl%22%3A%22https%3A%2F%2Fmedia1.giphy.com%2Fmedia%2FuBaZ85HVMd4wIX8TpS%2F200.gif%22%7D%5D
 
 
 
