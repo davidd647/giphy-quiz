@@ -109,6 +109,7 @@ export default class Play extends React.Component {
                       if (orderling === 0) {
                         return (
                           <Button
+                            className="mx-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 0)
                             }
@@ -120,6 +121,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 1) {
                         return (
                           <Button
+                            className="mx-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 1)
                             }
@@ -131,6 +133,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 2) {
                         return (
                           <Button
+                            className="mx-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 2)
                             }
@@ -142,6 +145,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 3) {
                         return (
                           <Button
+                            className="mx-1"
                             onClick={() =>
                               this.handleClickRight(questionIndex, 3)
                             }
