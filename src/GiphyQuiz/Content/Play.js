@@ -95,9 +95,13 @@ export default class Play extends React.Component {
                       <br />
                       {this.state.userAnswered[questionIndex].answer ===
                       question.right ? (
-                        <span aria-label="checkmark">✔️</span>
+                        <span aria-label="checkmark" role="img">
+                          ✔️
+                        </span>
                       ) : (
-                        <span aria-label="wrong">X</span>
+                        <span aria-label="wrong" role="img">
+                          X
+                        </span>
                       )}
                     </div>
                   ) : (
