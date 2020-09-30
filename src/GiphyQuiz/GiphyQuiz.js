@@ -12,9 +12,19 @@ export default class GiphyQuiz extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { screen: "about" };
+    this.state = { screen: "about", quizData: null };
 
-    console.log("This is first method called upon initialization");
+    const urlParams = new URLSearchParams(window.location.search);
+    this.state.quizData = JSON.parse(urlParams.get("data"));
+    console.log(this.state.quizData);
+  }
+
+  componentDidMount() {
+    if (this.state.quizData !== null) {
+      const newState = this.state;
+      newState.screen = "play";
+      this.setState(newState);
+    }
   }
 
   changeScreen(screen) {
@@ -25,37 +35,44 @@ export default class GiphyQuiz extends React.Component {
 
   render() {
     return (
-      <Row>
-        <Col xs={2}>
-          <ListGroup>
-            <ListGroup.Item
-              variant="dark"
-              onClick={() => this.changeScreen("about")}
-            >
-              ❓
-            </ListGroup.Item>
-            <ListGroup.Item
-              variant="dark"
-              onClick={() => this.changeScreen("play")}
-            >
-              ▶
-            </ListGroup.Item>
-            <ListGroup.Item
-              variant="dark"
-              onClick={() => this.changeScreen("new")}
-              active
-            >
-              ➕
-            </ListGroup.Item>
-          </ListGroup>
-        </Col>
-        {/* <Col xs={10} onClick={() => console.log(this)}>
+      <div>
+        <h1 className="mb-3">Giphy Quiz!</h1>
+        <Row>
+          <Col xs={3} className="mt-5">
+            <ListGroup className="mt-3">
+              <ListGroup.Item
+                variant="dark"
+                onClick={() => this.changeScreen("about")}
+                active={this.state.screen === "about" ? true : false}
+              >
+                ？
+              </ListGroup.Item>
+              <ListGroup.Item
+                variant="dark"
+                onClick={() => this.changeScreen("play")}
+                active={this.state.screen === "play" ? true : false}
+              >
+                ▶
+              </ListGroup.Item>
+              <ListGroup.Item
+                variant="dark"
+                onClick={() => this.changeScreen("new")}
+                active={this.state.screen === "new" ? true : false}
+              >
+                ✚
+              </ListGroup.Item>
+            </ListGroup>
+          </Col>
+          {/* <Col xs={10} onClick={() => console.log(this)}>
           Content
         </Col> */}
-        {this.state.screen === "about" ? <About /> : null}
-        {this.state.screen === "play" ? <Play /> : null}
-        {this.state.screen === "new" ? <New /> : null}
-      </Row>
+          {this.state.screen === "about" ? <About /> : null}
+          {this.state.screen === "play" ? (
+            <Play quiz={this.state.quizData} />
+          ) : null}
+          {this.state.screen === "new" ? <New /> : null}
+        </Row>
+      </div>
     );
   }
 }
