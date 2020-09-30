@@ -82,6 +82,7 @@ export default class Play extends React.Component {
                     src={question.giphUrl}
                     className="w-100 py-3"
                     style={{ maxHeight: "200px", maxWidth: "200px" }}
+                    alt="Question"
                   />
                   <br />
 
@@ -94,9 +95,9 @@ export default class Play extends React.Component {
                       <br />
                       {this.state.userAnswered[questionIndex].answer ===
                       question.right ? (
-                        <span>✔️</span>
+                        <span aria-label="checkmark">✔️</span>
                       ) : (
-                        <span>X</span>
+                        <span aria-label="wrong">X</span>
                       )}
                     </div>
                   ) : (
@@ -146,6 +147,7 @@ export default class Play extends React.Component {
                           </Button>
                         );
                       }
+                      return null;
                     })
                   )}
                   <br />

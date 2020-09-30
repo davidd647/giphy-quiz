@@ -39,7 +39,11 @@ export default class About extends React.Component {
         <h3>Why though?</h3>
         <p>
           Giphy Quiz was made as an experiment for a{" "}
-          <a href="https://mintbean.io/" target="_blank">
+          <a
+            href="https://mintbean.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Mintbean
           </a>{" "}
           hackathon.
@@ -58,7 +62,11 @@ export default class About extends React.Component {
         <h3>Who made this?</h3>
         <p>
           Me!{" "}
-          <a href="https://www.twitter.com/d2dev_" target="_blank">
+          <a
+            href="https://www.twitter.com/d2dev_"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             David Dales
           </a>
           .
