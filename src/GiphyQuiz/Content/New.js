@@ -207,13 +207,13 @@ export default class New extends React.Component {
 
         <hr />
 
-        <span>Link to share quiz:</span>
+        <span>Link to play/share quiz:</span>
         <br />
         {this.state.quizUrl === "" ? (
           <span>(Link will appear when you have at least one question...)</span>
         ) : (
           <a href={this.state.quizUrl} className="truncate">
-            {this.state.quizUrl}
+            ▶ {this.state.quizUrl}
           </a>
         )}
       </Col>

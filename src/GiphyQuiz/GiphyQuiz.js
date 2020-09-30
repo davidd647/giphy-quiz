@@ -47,13 +47,15 @@ export default class GiphyQuiz extends React.Component {
               >
                 ？
               </ListGroup.Item>
-              <ListGroup.Item
-                variant="dark"
-                onClick={() => this.changeScreen("play")}
-                active={this.state.screen === "play" ? true : false}
-              >
-                ▶
-              </ListGroup.Item>
+              {this.state.quizData === null ? null : (
+                <ListGroup.Item
+                  variant="dark"
+                  onClick={() => this.changeScreen("play")}
+                  active={this.state.screen === "play" ? true : false}
+                >
+                  ▶
+                </ListGroup.Item>
+              )}
               <ListGroup.Item
                 variant="dark"
                 onClick={() => this.changeScreen("new")}
