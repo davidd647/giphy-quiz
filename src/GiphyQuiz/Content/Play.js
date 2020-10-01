@@ -60,8 +60,8 @@ export default class Play extends React.Component {
         <h2 className="pb-3">Play</h2>
         <br />
         <p className="mt-3 mb-0">
-          The writer of the quiz used the text from one of the four buttons to
-          find the gif - can you guess what text they used?
+          How good are you at finding gifs??? <br />
+          What actual search phrase resulted in this gif???!!!
         </p>
         {this.props.quiz !== null ? null : (
           <p className="text-danger mt-3">
@@ -70,7 +70,7 @@ export default class Play extends React.Component {
           </p>
         )}
         <br />
-        {console.log("this.props: ", this.props)}
+        {console.log("this.props.quiz!!!: \n", JSON.stringify(this.props.quiz))}
         {this.props.quiz === null
           ? null
           : this.props.quiz.map((question, questionIndex) => {
@@ -109,7 +109,7 @@ export default class Play extends React.Component {
                       if (orderling === 0) {
                         return (
                           <Button
-                            className="mx-1"
+                            className="m-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 0)
                             }
@@ -121,7 +121,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 1) {
                         return (
                           <Button
-                            className="mx-1"
+                            className="m-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 1)
                             }
@@ -133,7 +133,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 2) {
                         return (
                           <Button
-                            className="mx-1"
+                            className="m-1"
                             onClick={() =>
                               this.handleClickWrong(questionIndex, 2)
                             }
@@ -145,7 +145,7 @@ export default class Play extends React.Component {
                       } else if (orderling === 3) {
                         return (
                           <Button
-                            className="mx-1"
+                            className="m-1"
                             onClick={() =>
                               this.handleClickRight(questionIndex, 3)
                             }
