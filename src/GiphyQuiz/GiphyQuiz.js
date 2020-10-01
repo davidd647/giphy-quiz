@@ -16,7 +16,6 @@ export default class GiphyQuiz extends React.Component {
 
     const urlParams = new URLSearchParams(window.location.search);
     this.state.quizData = JSON.parse(urlParams.get("data"));
-    console.log(this.state.quizData);
   }
 
   componentDidMount() {
@@ -28,7 +27,6 @@ export default class GiphyQuiz extends React.Component {
   }
 
   changeScreen(screen) {
-    console.log(screen);
 
     this.setState({ screen: screen });
   }
@@ -86,7 +84,6 @@ export default class GiphyQuiz extends React.Component {
               </ListGroup.Item>
             </ListGroup>
           </Col>
-          {/* <Col xs={10} onClick={() => console.log(this)}>
           Content
         </Col> */}
           {this.state.screen === "about" ? <About /> : null}

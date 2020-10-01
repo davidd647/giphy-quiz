@@ -70,7 +70,6 @@ export default class Play extends React.Component {
           </p>
         )}
         <br />
-        {console.log("this.props.quiz!!!: \n", JSON.stringify(this.props.quiz))}
         {this.props.quiz === null
           ? null
           : this.props.quiz.map((question, questionIndex) => {

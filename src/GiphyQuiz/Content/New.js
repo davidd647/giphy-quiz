@@ -95,16 +95,13 @@ export default class New extends React.Component {
   }
 
   async previewGif() {
-    console.log("preview gif...", this.state.right);
     const gifUrl = await this.getGif(this.state.right);
-    console.log(gifUrl);
     const newState = this.state;
     newState.gifUrl = gifUrl;
     this.setState(newState);
   }
 
   refreshStateUrl() {
-    console.log(JSON.stringify(this.state.quiz));
     const quizString = JSON.stringify(this.state.quiz);
     const quizUriString = encodeURIComponent(quizString);
     const websiteOrigin = window.location.origin;
