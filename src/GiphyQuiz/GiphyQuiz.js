@@ -27,7 +27,6 @@ export default class GiphyQuiz extends React.Component {
   }
 
   changeScreen(screen) {
-
     this.setState({ screen: screen });
   }
 
@@ -84,8 +83,7 @@ export default class GiphyQuiz extends React.Component {
               </ListGroup.Item>
             </ListGroup>
           </Col>
-          Content
-        </Col> */}
+
           {this.state.screen === "about" ? <About /> : null}
           {this.state.screen === "play" ? (
             <Play quiz={this.state.quizData} />
